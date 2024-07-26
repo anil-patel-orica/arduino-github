@@ -40,7 +40,7 @@ jobs:
         run: arduino-cli board list  
 
       # Runs a single command using the runners shell
-      - name: List all boards connected to System
+      - name: List all boards Installed
         run: arduino-cli board listall avr  
 
       # Runs a single command using the runners shell
