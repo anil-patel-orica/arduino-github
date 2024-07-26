@@ -34,3 +34,19 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+
+      # Runs a single command using the runners shell
+      - name: List all boards connected to System
+        run: arduino-cli board list  
+
+      # Runs a single command using the runners shell
+      - name: List all boards connected to System
+        run: arduino-cli board listall avr  
+
+      # Runs a single command using the runners shell
+      - name: Compile
+        run: arduino-cli compile --fqbn arduino:avr:mega Blink
+
+      # Runs a single command using the runners shell
+      - name: upload
+        run: arduino-cli upload --fqbn arduino:avr:mega --port COM11 Blink
